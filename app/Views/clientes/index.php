@@ -32,7 +32,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Início</a></li>
                         <li class="breadcrumb-item active">Clientes</li>
                     </ol>
                 </div><!-- /.col -->
@@ -78,7 +78,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="/clientes/novo" class="btn btn-info">Novo Cliente</a>
+                            <a href="/clientes/novo" class="btn btn-info"><i class="fas fa-user-plus"></i> Novo Cliente</a>
                         </div>
 
                         <div class="card-body">
@@ -106,9 +106,9 @@
                                                 <td><?= $cliente['endereco'] ?></td>
                                                 <td><?= $cliente['limite_de_credito'] ?></td>
                                                 <td>
-                                                    <a href="/clientes/ver/<?= $cliente['id_cliente'] ?>" class="btn btn-primary">Ver</a>
-                                                    <a href="/clientes/editar/<?= $cliente['id_cliente'] ?>" class="btn btn-warning">Editar</a>
-                                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('id_cliente'). value ='<?= $cliente['id_cliente'] ?>'" data-toggle="modal" data-target="#modal-confirmacao-delete">Excluir</button>
+                                                    <a href="/clientes/ver/<?= $cliente['id_cliente'] ?>" class="btn btn-primary"><i class="fas fa-search"></i></a>
+                                                    <a href="/clientes/editar/<?= $cliente['id_cliente'] ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('id_cliente'). value ='<?= $cliente['id_cliente'] ?>'" data-toggle="modal" data-target="#modal-confirmacao-delete"><i class="fas fa-trash-alt"></i></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
