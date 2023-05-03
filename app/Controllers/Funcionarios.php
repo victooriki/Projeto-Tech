@@ -48,19 +48,18 @@ class Funcionarios extends Controller
         $dados = $this->request->getVar();
 
         $session = session();
-        
-        if(isset($dados['id_funcionarios'])):
+
+        if (isset($dados['id_funcionario'])) :
             $this->funcionario_model
-                            ->where('id_funcionario', $dados['id_funcionario'])
-                            ->set($dados)
-                            ->update();
+                ->where('id_funcionario', $dados['id_funcionario'])
+                ->set($dados)
+                ->update();
 
-            $session->setFlashdata('alert', 'success_create');
+            $session->setFlashdata('alert', 'success_update');
 
-            return redirect()->to('/funcionarios');
+            return redirect()->to("/funcionarios/editar/{$dados['id_funcionario']}");
+
         endif;
-
-        
         $this->funcionario_model
             ->insert($dados);
 

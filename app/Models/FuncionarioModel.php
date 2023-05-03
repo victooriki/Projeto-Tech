@@ -19,7 +19,7 @@ class FuncionarioModel extends Model
         'data_de_contratacao',
         'cargo',
         'salario',
-        'dia_de_pagamento ',
+        'dia_de_pagamento',
     ];
 
     protected $useTimestamps = true;

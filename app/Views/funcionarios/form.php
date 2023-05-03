@@ -23,6 +23,27 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
+
+            <?php
+            $session = session();
+            $alert = $session->get('alert');
+            ?>
+
+            <?php if (isset($alert)) : ?>
+
+                <?php if ($alert == 'success_update') : ?>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Funcionário atualizado com sucesso!
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
+            <?php endif; ?>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
@@ -93,7 +114,7 @@
                                         </div>
                                     </div>
 
-                                    <?php if(isset($funcionario)): ?>
+                                    <?php if (isset($funcionario)) : ?>
                                         <input type="hidden" name="id_funcionario" value="<?= $funcionario['id_funcionario'] ?>">
                                     <?php endif; ?>
 
