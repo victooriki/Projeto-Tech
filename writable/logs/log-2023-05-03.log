@@ -59,3 +59,353 @@ INFO - 2023-05-03 14:48:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-03 14:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-03 14:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-03 14:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 15:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 15:40:31 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 15:40:31 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:40:31\', \'2023-05-03 15:40:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:40:31\', \'2023-05-03 15:40:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:40:31\', \'2023-05-03 15:40:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 15:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 15:45:45 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 15:45:45 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:45:45\', \'2023-05-03 15:45:45\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:45:45\', \'2023-05-03 15:45:45\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:45:45\', \'2023-05-03 15:45:45\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 15:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 15:46:25 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(63): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 15:46:25 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:46:25\', \'2023-05-03 15:46:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:46:25\', \'2023-05-03 15:46:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:46:25\', \'2023-05-03 15:46:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 15:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 15:49:28 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 15:49:28 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:49:28\', \'2023-05-03 15:49:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:49:28\', \'2023-05-03 15:49:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 15:49:28\', \'2023-05-03 15:49:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 16:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 16:57:40 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 16:57:40 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 16:57:40\', \'2023-05-03 16:57:40\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 16:57:40\', \'2023-05-03 16:57:40\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'5\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 16:57:40\', \'2023-05-03 16:57:40\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:03:20 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:03:20 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:03:20\', \'2023-05-03 17:03:20\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:03:20\', \'2023-05-03 17:03:20\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:03:20\', \'2023-05-03 17:03:20\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:04:09 --> mysqli_sql_exception: Duplicate entry '5' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:04:09 --> Duplicate entry '5' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:04:09\', \'2023-05-03 17:04:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:04:09\', \'2023-05-03 17:04:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'5\', \'2023-05-03 17:04:09\', \'2023-05-03 17:04:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:08:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:08:19 --> mysqli_sql_exception: Duplicate entry '6' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:08:19 --> Duplicate entry '6' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:08:19\', \'2023-05-03 17:08:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:08:19\', \'2023-05-03 17:08:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:08:19\', \'2023-05-03 17:08:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(64): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:09:42 --> mysqli_sql_exception: Duplicate entry '6' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:09:42 --> Duplicate entry '6' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:09:42\', \'2023-05-03 17:09:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:09:42\', \'2023-05-03 17:09:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:09:42\', \'2023-05-03 17:09:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:10:16 --> mysqli_sql_exception: Duplicate entry '6' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:10:16 --> Duplicate entry '6' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:10:16\', \'2023-05-03 17:10:16\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:10:16\', \'2023-05-03 17:10:16\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'55\', \'2023-05-03\', \'5\', \'5\', \'5\', \'5\', \'2023-05-26\', \'5\', \'5\', \'6\', \'2023-05-03 17:10:16\', \'2023-05-03 17:10:16\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-03 17:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:15:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:15:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-03 17:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-03 17:15:36 --> mysqli_sql_exception: Duplicate entry '6' for key 'PRIMARY' in C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\projeto-modulo-2\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `fu...', 0)
+#1 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fu...')
+#2 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fu...')
+#3 C:\xampp\htdocs\projeto-modulo-2\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fu...', Array, false)
+#4 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\projeto-modulo-2\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\projeto-modulo-2\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\projeto-modulo-2\app\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+#9 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+#10 C:\xampp\htdocs\projeto-modulo-2\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\projeto-modulo-2\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-03 17:15:36 --> Duplicate entry '6' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'33\', \'3333-03-31\', \'3333\', \'3\', \'3\', \'3\', \'3333-03-31\', \'33\', \'333\', \'6\', \'2023-05-03 17:15:36\', \'2023-05-03 17:15:36\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'33\', \'3333-03-31\', \'3333\', \'3\', \'3\', \'3\', \'3333-03-31\', \'33\', \'333\', \'6\', \'2023-05-03 17:15:36\', \'2023-05-03 17:15:36\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (\'33\', \'3333-03-31\', \'3333\', \'3\', \'3\', \'3\', \'3333-03-31\', \'33\', \'333\', \'6\', \'2023-05-03 17:15:36\', \'2023-05-03 17:15:36\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `funcionarios` (`nome`, `data_de_nascimento`, `rg`, `cpf`, `telefone`, `endereco`, `data_de_contratacao`, `cargo`, `salario`, `id_funcionario`, `created_at`, `updated_at`) VALUES (:nome:, :data_de_nascimento:, :rg:, :cpf:, :telefone:, :endereco:, :data_de_contratacao:, :cargo:, :salario:, :id_funcionario:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Funcionarios.php(65): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Funcionarios->store()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Funcionarios))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

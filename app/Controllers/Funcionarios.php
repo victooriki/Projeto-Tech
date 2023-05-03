@@ -32,15 +32,38 @@ class Funcionarios extends Controller
         echo View('templates/footer');
     }
 
+    public function editar($id_funcionario)
+    {
+        $data['funcionario'] = $this->funcionario_model
+                                                ->where('id_funcionario', $id_funcionario)
+                                                ->first();
+
+        echo View('templates/header');
+        echo View('funcionarios/form', $data);
+        echo View('templates/footer');
+    }
+
     public function store()
     {
         $dados = $this->request->getVar();
+
+        $session = session();
+        
+        if(isset($dados['id_funcionarios'])):
+            $this->funcionario_model
+                            ->where('id_funcionario', $dados['id_funcionario'])
+                            ->set($dados)
+                            ->update();
+
+            $session->setFlashdata('alert', 'success_create');
+
+            return redirect()->to('/funcionarios');
+        endif;
+
         
         $this->funcionario_model
             ->insert($dados);
 
-        
-        $session = session();
         $session->setFlashdata('alert', 'success_create');
 
         return redirect()->to('/funcionarios');

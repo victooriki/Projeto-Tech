@@ -87,15 +87,9 @@
                                     <tr>
                                         <th style="width: 10px">Cód:</th>
                                         <th>Nome</th>
-                                        <th>Data de Nascimento</th>
-                                        <th>RG</th>
                                         <th>CPF</th>
-                                        <th>Telefone</th>
-                                        <th>Endereço</th>
                                         <th>Data de Contratação</th>
                                         <th>Cargo</th>
-                                        <th>Salário</th>
-                                        <th>Dia de Pagamento</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
@@ -106,17 +100,11 @@
                                             <tr>
                                                 <td><?= $funcionario['id_funcionario'] ?></td>
                                                 <td><?= $funcionario['nome'] ?></td>
-                                                <td><?= $funcionario['data_de_nascimento'] ?></td>
-                                                <td><?= $funcionario['rg'] ?></td>
                                                 <td><?= $funcionario['cpf'] ?></td>
-                                                <td><?= $funcionario['telefone'] ?></td>
-                                                <td><?= $funcionario['endereco'] ?></td>
                                                 <td><?= $funcionario['data_de_contratacao'] ?></td>
                                                 <td><?= $funcionario['cargo'] ?></td>
-                                                <td><?= $funcionario['salario'] ?></td>
-                                                <td><?= $funcionario['dia_de_pagamento'] ?></td>
                                                 <td>
-                                                    
+                                                    <a href="/funcionarios/editar/<?= $funcionario['id_funcionario'] ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
