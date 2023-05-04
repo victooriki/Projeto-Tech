@@ -25,6 +25,17 @@ class Funcionarios extends Controller
         echo View('templates/footer');
     }
 
+    public function ver($id_funcionario)
+    {
+        $data['funcionario'] = $this->funcionario_model
+                                            ->where('id_funcionario', $id_funcionario)
+                                            ->first();
+
+        echo View('templates/header');
+        echo View('funcionarios/ver', $data);
+        echo View('templates/footer');
+    }
+
     public function novo()
     {
         echo View('templates/header');
@@ -64,6 +75,20 @@ class Funcionarios extends Controller
             ->insert($dados);
 
         $session->setFlashdata('alert', 'success_create');
+
+        return redirect()->to('/funcionarios');
+    }
+
+    public function delete()
+    {
+        $id_funcionario = $this->request->getVar('id_funcionario');
+
+        $this->funcionario_model
+            ->where('id_funcionario', $id_funcionario)
+            ->delete();
+
+        $session = session();
+        $session->setFlashdata('alert', 'success_delete');
 
         return redirect()->to('/funcionarios');
     }

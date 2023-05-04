@@ -1,7 +1,7 @@
 <div class="modal fade" id="modal-confirmacao-delete">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="/clientes/excluir" method="post">
+            <form action="/funcionarios/delete" method="post">
                 <div class="modal-header">
                     <h4 class="modal-title">Confirme sua ação</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -9,8 +9,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Deseja realmente excluir esse cliente?</p>
-                    <input type="hidden" id="id_cliente" name="id_cliente" value="">
+                    <p>Deseja realmente excluir esse funcionário?</p>
+                    <input type="hidden" id="id_funcionario" name="id_funcionario" value="">
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -66,7 +66,7 @@
                         <div class="col-lg-12">
                             <div class="alert alert-success alert-dismissible">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                Cliente excluido com sucesso!
+                                Funcionário excluido com sucesso!
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,9 @@
                                                 <td><?= $funcionario['data_de_contratacao'] ?></td>
                                                 <td><?= $funcionario['cargo'] ?></td>
                                                 <td>
+                                                    <a href="/funcionarios/ver/<?= $funcionario['id_funcionario'] ?>" class="btn btn-primary"><i class="fas fa-search"></i></a>
                                                     <a href="/funcionarios/editar/<?= $funcionario['id_funcionario'] ?>" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                                                    <button type="button" class="btn btn-danger" onclick="document.getElementById('id_funcionario'). value ='<?= $funcionario['id_funcionario'] ?>'" data-toggle="modal" data-target="#modal-confirmacao-delete"><i class="fas fa-trash-alt"></i></button>
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>
