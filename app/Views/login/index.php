@@ -1,3 +1,11 @@
+<?php 
+
+    $session = session();
+
+    $alert = $session->get('alert');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,7 +32,7 @@
                 <a href="../../index2.html" class="h1"><b>All Tech</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Entre com seu usuário e senha</p>
+                <p class="login-box-msg"><?= (isset($alert) && $alert == "error_login" ) ? "<span style='color: red'>Usuário ou senha incorretos!</spam>" : "Entre com seu usuário e senha" ?></p>
 
                 <form action="/login/autenticar" method="post">
                     <div class="input-group mb-3">

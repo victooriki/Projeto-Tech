@@ -25,7 +25,7 @@ class Login extends Controller
         
         $usuario = $this->login_model
                         ->where('usuario', $dados['usuario'])
-                        ->where('senha', $dados['senha'])
+                        ->where('senha', md5($dados['senha']))
                         ->first();
 
         $session = session();
@@ -39,9 +39,57 @@ class Login extends Controller
 
         endif;
 
-        $session->setFlashdata('alert', 'erro_login');
+        $session->setFlashdata('alert', 'error_login');
 
         return redirect()->to('/login');
+    }
+
+    public function logout()
+    {
+        $session = session();
+
+        $session->destroy();
+
+        return redirect()->to('/login');
+    }
+
+    public function trocarSenha()
+    {
+        echo View('templates/header');
+        echo View('login/trocar_senha');
+        echo View('templates/footer');
+    }
+
+    public function store()
+    {
+        $dados = $this->request->getVar();
+
+        $usuario = $this->login_model
+                        ->where('id_login', 1)
+                        ->first();
+
+        $session = session();
+
+        if(md5($dados['senha_atual']) == $usuario['senha']):
+
+            if($dados['nova_senha'] = $dados['confirmar_nova_senha']):
+
+                $this->login_model
+                    ->where('id_login', 1)
+                    ->set('senha', md5($dados['nova_senha']))
+                    ->update();
+
+                $session->setFlashdata('alert', 'success_trocar_senha');
+
+                return  redirect()->to('/login/trocarSenha');
+
+            endif;
+
+        endif;
+
+        $session->setFlashdata('alert', 'error_trocar_senha');
+
+        return  redirect()->to('/login/trocarSenha');
     }
 }
 
