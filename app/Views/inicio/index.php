@@ -86,7 +86,7 @@ $primeiro_nome = $session->get('primeiro_nome');
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Gráfico de Pizza</h3>
+                            <h3 class="card-title">Gráfico de Rosca</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
