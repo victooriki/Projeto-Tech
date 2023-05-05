@@ -1,19 +1,19 @@
-<?php 
+<?php
 
-    $session = session();
+$session = session();
 
-    $primeiro_nome = $session->get('primeiro_nome');
+$primeiro_nome = $session->get('primeiro_nome');
 
-    if($primeiro_nome == null):
+if ($primeiro_nome == null) :
 
-        echo "
+    echo "
             <script>
                 alert('Acesse sua conta para continuar!');
                 window.location.href = '/login';
             </script>
         ";
 
-    endif;
+endif;
 
 ?>
 
@@ -33,6 +33,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="<?= base_url('theme/plugins/fontawesome-free/css/all.min.css') ?>">
+    <!-- DataTable -->
+    <link rel="stylesheet" href="<?= base_url('theme/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('theme/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('theme/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url('theme/dist/css/adminlte.min.css') ?>">
 
@@ -45,5 +49,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="wrapper">
 
 
-<?php include_once('navbar.php') ?>
-<?php include_once('sidebar.php') ?>
+        <?php include_once('navbar.php') ?>
+        <?php include_once('sidebar.php') ?>
