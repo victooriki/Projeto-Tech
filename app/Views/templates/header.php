@@ -35,6 +35,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="<?= base_url('theme/plugins/fontawesome-free/css/all.min.css') ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?= base_url('theme/dist/css/adminlte.min.css') ?>">
+
+    <!-- js -->
+    <script src="<?= base_url('assets/js/Chart.js') ?>"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini">

@@ -60,7 +60,52 @@ $primeiro_nome = $session->get('primeiro_nome');
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Gráficos de barras</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart">
+                                <canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Gráfico de Pizza</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart">
+                                <canvas id="chartjs-4" class="chartjs" width="undefined" height="undefined"></canvas>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
             </div>
 
         </div><!-- /.container-fluid -->
@@ -68,3 +113,41 @@ $primeiro_nome = $session->get('primeiro_nome');
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<script>
+    new Chart(document.getElementById("chartjs-1"), {
+        "type": "bar",
+        "data": {
+            "labels": ["Clientes", "Funcionários", "Produtos"],
+            "datasets": [{
+                "label": "Total",
+                "data": [<?= $total_de_clientes ?>, <?= $total_de_funcionarios ?>, <?= $total_de_produtos ?>],
+                "fill": false,
+                "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                "borderWidth": 1
+            }]
+        },
+        "options": {
+            "scales": {
+                "yAxes": [{
+                    "ticks": {
+                        "beginAtZero": true
+                    }
+                }]
+            }
+        }
+    });
+
+    new Chart(document.getElementById("chartjs-4"), {
+        "type": "doughnut",
+        "data": {
+            "labels": ["Clientes", "Funcionários", "Produtos"],
+            "datasets": [{
+                "label": "Total",
+                "data": [<?= $total_de_clientes ?>, <?= $total_de_funcionarios ?>, <?= $total_de_produtos ?>],
+                "backgroundColor": ["rgb(255, 99, 132)", "rgb(54, 162, 235)", "rgb(255, 205, 86)"]
+            }]
+        }
+    });
+</script>
