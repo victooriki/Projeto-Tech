@@ -57,7 +57,6 @@ class Funcionarios extends Controller
     public function store()
     {
         $dados = $this->request->getVar();
-
         $session = session();
 
         if (isset($dados['id_funcionario'])) :
