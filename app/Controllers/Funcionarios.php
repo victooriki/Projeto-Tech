@@ -74,7 +74,6 @@ class Funcionarios extends Controller
             ->insert($dados);
 
         $session->setFlashdata('alert', 'success_create');
-
         return redirect()->to('/funcionarios');
     }
 
